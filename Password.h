@@ -21,5 +21,11 @@ public:
   letter and at least one lower-case letter
   */
   bool has_mixed_case(string);
+
+  /*
+  Checks if the string contains at least one special character.
+  Special characters are defined as non-alphanumeric characters.
+  */
+  bool has_special_char(string pass);
 };
 #endif

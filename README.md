@@ -18,3 +18,17 @@ within the container. If you change the code (and not the container
 configuration), you only need to repeat this command.
 
 `docker run -v "$(pwd)":/usr/src -it cpp-container`
+
+
+Docker Broken, Use this instead:
+
+make mac-all
+./a.put
+
+
+Notes for testing:
+docker run -v "$(pwd)":/usr/src -it cpp-container sh
+make clean
+make
+./PasswordTest
+gcov -r Password.cpp # or gcov -rbc Password.cpp # -r is relative, bc is for branch coverage

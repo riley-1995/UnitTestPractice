@@ -27,3 +27,16 @@ int Password::count_leading_characters(string phrase){
 bool Password::has_mixed_case(string pass){
   return false;
 }
+
+/*
+  Checks if the string contains at least one special character.
+  Special characters are defined as non-alphanumeric characters.
+*/
+bool Password::has_special_char(string pass) {
+  for (char c : pass) {
+    if (!isalnum(c)) {
+      return true;
+    }
+  }
+  return false;
+}

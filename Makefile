@@ -47,3 +47,6 @@ PasswordTest.o : PasswordTest.cpp \
 
 PasswordTest : Password.o PasswordTest.o gtest_main.a
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@
+
+mac-all: ./*.cpp
+	g++ ./*.cpp -lgtest -I/opt/homebrew/Cellar/googletest/1.16.0/include -L/opt/homebrew/Cellar/googletest/1.16.0/lib /opt/homebrew/Cellar/googletest/1.16.0/lib/libgtest_main.a
